@@ -56,7 +56,7 @@ class MyBTNAV extends StatelessWidget {
 				    color: Colors.grey,
 			    ),
 			    title: Text(
-				    'MY',
+				    '촬영',
 				    style: TextStyle(
 					    color: Colors.grey,
 				    ),
