@@ -1,17 +1,20 @@
-import 'package:flutter/material.dart';
-import 'package:sand_box/app.dart';
+import 'dart:convert' as convert;
+import 'package:http/http.dart' as http;
 
-void main() => runApp(MyApp());
+class Data{
+  Map<String, dynamic> _datas = <String, dynamic>{};
+}
+void main() {
+  api();
+}
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: App(),
-    );
+void api() async {
+  var url = 'https://works.storebeta.co.kr:444/exec/proajax.php?act=store&han=get_list2&stype=ALL';
+  Data responseData = new Data();
+
+  var response = await http.get(url);
+  if (response.statusCode == 200){
+    print(responseData._datas);
+    var jsonResponse = convert.jsonDecode(response.body);
   }
 }

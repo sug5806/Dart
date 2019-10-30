@@ -1,0 +1,16 @@
+# Configuration for https://pub.dartlang.org/packages/peanut
+
+directories:
+- charts/web
+# package:http doesn't work yet: https://github.com/flutter/flutter/issues/34858
+#- dad_jokes/web
+#- filipino_cuisine/web
+- gallery/web
+#- github_dataviz/web
+- particle_background/web
+- slide_puzzle/web
+- spinning_square/web
+- timeflow/web
+- vision_challenge/web
+
+post-build-dart-script: _tool/peanut_post_build.dart

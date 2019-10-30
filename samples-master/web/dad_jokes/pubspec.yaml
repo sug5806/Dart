@@ -1,0 +1,18 @@
+name: dad_jokes
+
+environment:
+  sdk: ">=2.2.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.12.0
+
+dev_dependencies:
+  pedantic: ^1.3.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - icon.png
+    - preview.png
