@@ -93,23 +93,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
-
-List<String> slr( List<String> sl ){
-  return sl;
-}
-​
-List<String> slrf( List<String> sl ){
-  return new List<String>.from(sl);
-}
-​
-void main(){
-  var l1 = slr( si );
-  var l2 = slr( si );
-  l2.add('12');
-  var l3 = slrf( si );
-  ​
-  print( '${ identical( si, l1 ) }');
-  print( '${ identical( si, l2 ) }');
-  print( '${ identical( si, l3 ) }');
-}
